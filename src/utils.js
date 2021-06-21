@@ -17,11 +17,10 @@ function buildSlackAttachments({ status, color, github }) {
           short: true,
         }
       : {
-          title: 'Branch',
+          title: `Branch (${sha.substring(0, 8)})`,
           value: `<https://github.com/${owner}/${repo}/commit/${sha} | ${branch}>`,
           short: true,
         };
-
   return [
     {
       color,
